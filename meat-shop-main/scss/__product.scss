@@ -1,0 +1,97 @@
+.product-page {
+  .hero {
+    .section-container {
+      padding-bottom: 20px;
+      @include grid(20px, center, center);
+      grid-template-columns: repeat(2, 1fr);
+
+      @include responsive_medium {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+    }
+
+    .section-content {
+      max-width: 400px;
+      width: 100%;
+      margin-right: auto;
+      margin-left: 0px;
+      height: 450px;
+      padding: 0 25px;
+      @include flex(space-evenly, flex-start);
+      flex-direction: column;
+
+      @include responsive_medium {
+        margin-left: auto;
+        height: 225px;
+        @include flex(space-between, center);
+      }
+
+      .section-title,
+      .section-label {
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 10px;
+
+        @include responsive_medium {
+          text-align: center !important;
+        }
+
+        @include responsive_small {
+          margin-bottom: 5px;
+        }
+      }
+
+      .section-title {
+        font-size: 36px;
+        line-height: 53px;
+        color: $black;
+        text-align: left;
+
+        @include responsive_small {
+          font-size: 30px;
+          line-height: 40px;
+          text-align: center;
+        }
+      }
+
+      .section-label {
+        font-size: 23px;
+        line-height: 30px;
+        color: $pri_clr;
+        text-transform: uppercase;
+
+        @include responsive_small {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+    }
+
+    .section-image {
+      @include grid(15px);
+      height: 90%;
+      grid-template-columns: repeat(3, 1fr);
+
+      .product-img {
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+      }
+
+      #product-img-1 {
+        @include responsive_small {
+          display: none;
+        }
+      }
+      #product-img-2 {
+        grid-column: 2 / 4;
+      }
+
+      #product-img-3 {
+        margin-left: 30px;
+        grid-column: 1 / 3;
+      }
+    }
+  }
+}

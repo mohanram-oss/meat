@@ -1,0 +1,20 @@
+// styles import
+@import './_responsive_mixins';
+@import './_mixins';
+@import './_fonts';
+@import './_colors';
+
+// general styles
+@import './_common';
+@import './_components';
+
+// sections
+@import './_header';
+@import './_footer';
+
+// pages
+@import './_home';
+@import './_product';
+@import './_contact';
+@import './_blog';
+@import './_about';

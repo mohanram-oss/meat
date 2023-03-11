@@ -1,0 +1,76 @@
+.footer {
+  background-color: $black;
+  color: #a2a4aa;
+  font-size: 14.5px;
+  line-height: 20px;
+
+  &-container {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 15px;
+    @include grid(50px);
+    grid-template-columns: 0.8fr 1fr;
+
+    @include responsive_large {
+      padding: 25px 15px;
+    }
+
+    @include responsive_medium {
+      grid-template-columns: 1fr;
+      max-width: 580px;
+    }
+
+    @include responsive_small {
+      gap: 20px;
+    }
+  }
+
+  &-info-container {
+    @include grid(20px);
+    grid-template-columns: 0.5fr 1fr;
+
+    @include responsive_small {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-item {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  h3,
+  h4 {
+    color: $white;
+    padding-bottom: 7px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  h4 {
+    font-family: 'Poppins_Medium';
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  a {
+    color: #a2a4aa;
+    &:hover {
+      color: $white;
+    }
+  }
+
+  li {
+    padding-top: 3px;
+    padding-bottom: 10px;
+  }
+
+  i {
+    margin-right: 7px;
+    font-size: 18px;
+  }
+}

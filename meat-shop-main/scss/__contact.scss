@@ -1,0 +1,161 @@
+.contact-page {
+  .hero {
+    background-image: linear-gradient(#ffffff26, #ffffff26),
+      url('../assets/img/banner-bg.jpg');
+    background-position: center;
+    background-size: cover;
+
+    .section-container {
+      padding-bottom: 20px;
+      @include grid(20px, center, center);
+      grid-template-columns: 0.65fr 1fr;
+
+      @include responsive_large {
+        grid-template-columns: 0.75fr 1fr;
+      }
+
+      @include responsive_medium {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+        gap: 45px;
+      }
+    }
+
+    .section-content {
+      max-width: 400px;
+      width: 100%;
+      margin-right: auto;
+      margin-left: 0px;
+      height: 450px;
+      padding: 0 25px;
+      @include flex(center, flex-start);
+      flex-direction: column;
+
+      @include responsive_medium {
+        margin-left: auto;
+        height: 180px;
+        @include flex(space-between, center);
+      }
+
+      .section-title,
+      .section-label {
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 10px;
+
+        @include responsive_medium {
+          text-align: center !important;
+        }
+
+        @include responsive_small {
+          margin-bottom: 5px;
+        }
+      }
+
+      .section-title {
+        font-size: 36px;
+        line-height: 53px;
+        color: $white;
+        text-align: left;
+
+        @include responsive_small {
+          font-size: 30px;
+          line-height: 40px;
+        }
+      }
+
+      .section-label {
+        font-size: 23px;
+        line-height: 30px;
+        color: $pri_clr;
+        text-transform: uppercase;
+
+        @include responsive_small {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+    }
+
+    .section-form {
+      background-color: #000000a6;
+      padding: 40px 35px;
+      border-radius: 10px;
+
+      @include responsive_small {
+        padding: 30px 10px;
+      }
+
+      .section-title {
+        font-family: 'Poppins_Medium';
+        font-size: 27px;
+        line-height: 36px;
+        color: $white;
+        text-align: left;
+        margin-bottom: 15px;
+
+        span {
+          color: #fc5b62;
+        }
+      }
+
+      .content {
+        font-size: 14px;
+        line-height: 18px;
+        color: #ffffff;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      label {
+        font-family: 'Poppins_Medium';
+        color: $white;
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      .input-field {
+        margin-bottom: 20px;
+      }
+
+      .input-grid {
+        @include grid(20px);
+        grid-template-columns: repeat(2, 1fr);
+
+        @include responsive_small {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+      }
+
+      input,
+      textarea {
+        margin-top: 5px;
+        font-family: 'Poppins_Medium';
+        padding: 7px 10px;
+        border-radius: 5px;
+        border: none;
+        width: 100%;
+        font-size: 16px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      textarea {
+        height: 160px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        display: block;
+
+        @include responsive_small {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

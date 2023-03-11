@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Meat Shop</title>
+    <link rel="icon" href="./assets/img/icon.ico" />
+    <!-- FontAwesome -->
+    <link href="./assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="./assets/fontawesome/css/solid.css" rel="stylesheet" />
+    <link href="./assets/fontawesome/css/regular.css" rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- JS -->
+    <script src="./js/jquery.min.js"></script>
+  </head>
+  <body class="home-page">
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <app-header></app-header>
+    <app-to-top></app-to-top>
+
+    <!-- Hero Start -->
+    <section class="hero">
+      <div class="section-container">
+        <div class="text-container">
+          <h2 class="section-label">delicious organic meat</h2>
+          <h1 class="section-title">enjoy fresh meat with the best quality</h1>
+        </div>
+        <a class="btn" href="#"> Read more </a>
+      </div>
+      <!-- / section container -->
+    </section>
+    <!-- Hero End -->
+
+    <div class="hero-image-container">
+      <script>
+        for (let i = 0; i < 3; i++) {
+          document.write(`
+            <div 
+              class="hero-img" 
+              style="background-image: linear-gradient(#00000040, #00000040), 
+                      url('./assets/img/hero-img-${i + 1}.jpg')">
+              <div class="img-content">
+                <h3 class="img-text">
+                  OFF
+                  <span class="num-text"> 30% </span>
+                  Mutton
+                </h3>
+                <a href="#" class="btn btn-rounded">Buy Now</a>
+              </div>
+              <!-- / img-content -->
+            </div>
+              `);
+        }
+      </script>
+      <!-- / hero-img -->
+    </div>
+    <!-- / image container -->
+
+    <!-- About Start -->
+    <section class="about">
+      <div class="section-container">
+        <div class="content-container">
+          <h2 class="section-title">about us</h2>
+          <p class="section-content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            commodo velit nec tellus varius, pulvinar pharetra urna ultricies.
+            Maecenas ut varius odio. Morbi orci urna, finibus sit amet convallis
+            sed, ultricies vitae odio.
+          </p>
+          <p class="section-content">
+            Etiam sit amet massa sagittis odio condimentum sagittis. Nulla
+            egestas vitae nisl eget ultricies. Vivamus a suscipit felis.
+            Suspendisse felis risus, blandit vehicula justo in, mattis elementum
+            turpis. Morbi elementum, mi eget ultrices lobortis, velit nibh
+            posuere diam, at aliquam sapien diam ut nisi. Suspendisse non justo
+            dolor. Suspendisse potenti. Duis egestas congue nunc, eu ullamcorper
+            purus aliquam non.
+          </p>
+        </div>
+        <!-- / content container -->
+
+        <div class="image-container">
+          <script>
+            for (let i = 0; i < 3; i++) {
+              document.write(`
+                <img 
+                  src="./assets/img/about-${i + 1}.jpg" 
+                  style="grid-area: about-${i + 1};"
+                  class='about-image'
+                  id='about-image-${i + 1}'
+                  alt="about-image" />
+                `);
+            }
+          </script>
+        </div>
+        <!-- / image container -->
+      </div>
+      <!-- / section container -->
+    </section>
+    <!-- About End -->
+
+    <!-- Banner Start -->
+    <section class="banner">
+      <div class="section-container">
+        <h2 class="section-title">subscription meat membership</h2>
+        <p class="section-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel ex
+          elementum, varius turpis at, semper nisi. Integer malesuada mollis
+          urna eget aliquam. Morbi placerat, leo in condimentum fermentum, velit
+          turpis rutrum tellus, vitae luctus neque odio eu est.
+        </p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+      <!-- / section container -->
+    </section>
+    <!-- Banner End -->
+
+    <!-- Product Start -->
+    <section class="product">
+      <div class="section-container">
+        <h2 class="section-title">our products</h2>
+        <div class="product-container">
+          <script>
+            let productList = ['turkey', 'chicken', 'lamb', 'mutton'];
+            for (let i = 0; i < productList.length; i++) {
+              document.write(`
+              <div class="product-item">
+                <img class="product-img" src="./assets/img/product-${
+                  i + 1
+                }.jpg" alt="" />
+                <h3 class="product-name">${productList[i]}</h3>
+              </div>
+            `);
+            }
+          </script>
+        </div>
+        <!-- / product container -->
+      </div>
+      <!-- / section container -->
+    </section>
+    <!-- Product End -->
+
+    <!-- Gallery Start -->
+    <section class="gallery">
+      <div class="section-container">
+        <h2 class="section-title">our gallery</h2>
+        <div class="gallery-container">
+          <script>
+            for (let i = 0; i < 6; i++) {
+              document.write(`
+                <div 
+                  class="gallery-image" 
+                  id="gallery-${i + 1}"
+                  style='background-image: 
+                      url("./assets/img/gallery-${i + 1}.jpg");'
+                > 
+                  <h4>Explore more</h4>
+                </div>
+                `);
+            }
+          </script>
+        </div>
+        <!-- / gallery container -->
+      </div>
+      <!-- / section container -->
+    </section>
+    <!-- Gallery End -->
+
+    <!-- Subscribe Start -->
+    <section class="subscribe">
+      <div class="section-container">
+        <h2 class="section-title">
+          subscribe for <span> meat membership </span>
+        </h2>
+        <p class="section-content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis impedit
+          nobis soluta amet, est ea labore quae minima suscipit repellat.
+        </p>
+
+        <div class="input-container">
+          <input
+            placeholder="Enter your email address..."
+            type="email"
+            name="email"
+          />
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </div>
+    </section>
+    <!-- Subscribe End -->
+
+    <!-- Info Start -->
+    <div class="info">
+      <div class="section-container">
+        <div class="info-item">
+          <i class="fa-solid fa-location-pin"></i>
+          <div class="info-item__content">
+            <h4>coporate address:</h4>
+            <p>PO Box 1338, Nayabazzar, Nepal</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-phone"></i>
+          <div class="info-item__content">
+            <h4>contact address:</h4>
+            <p>+1 320 669 2709</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div class="info-item__content">
+            <h4>email address:</h4>
+            <p>meatshop@gamil.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Info End -->
+
+    <app-footer></app-footer>
+
+    <!-- JS -->
+    <script src="./js/components.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

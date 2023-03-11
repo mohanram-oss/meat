@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Blog | Meat Shop</title>
+    <link rel="icon" href="./assets/img/icon.ico" />
+    <!-- FontAwesome -->
+    <link href="./assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="./assets/fontawesome/css/solid.css" rel="stylesheet" />
+    <link href="./assets/fontawesome/css/regular.css" rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- JS -->
+    <script src="./js/jquery.min.js"></script>
+  </head>
+  <body class="blog-page">
+    <!-- Preloader -->
+    <div id="preloader"></div>
+    <app-header></app-header>
+    <app-to-top></app-to-top>
+
+    <section class="blog">
+      <div class="section-container">
+        <h1 class="section-title">our blog</h1>
+        <div class="blog-item-container">
+          <script>
+            for (let i = 0; i < 5; i++) {
+              document.write(`
+                <div class="blog-item">
+                    <div class="blog-info">
+                        <img src='https://source.unsplash.com/1000x100${i}' />
+                        <h3 class="blog-date">Thursday, October 20</h3>
+                    </div>
+                    <!-- / blog info -->
+                    <div class="blog-content">
+                        <h3 class="blog-title">Lekali Meats</h3>
+                        <p class="blog-description">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
+                          libero expedita in nam quae quaerat quasi iusto temporibus, atque
+                        quas.
+                        </p>
+                        <a href="#" class="btn">Read more</a>
+                    </div>
+                    <!-- / blog content -->
+                </div>
+                <!-- / blog item -->
+                `);
+            }
+          </script>
+        </div>
+        <!-- / blog item container -->
+      </div>
+      <!-- / section container -->
+    </section>
+    <!-- / blog section -->
+
+    <!-- Banner Start -->
+    <section class="banner">
+      <div class="section-container">
+        <h2 class="section-title">subscription meat membership</h2>
+        <p class="section-content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel ex
+          elementum, varius turpis at, semper nisi. Integer malesuada mollis
+          urna eget aliquam. Morbi placerat, leo in condimentum fermentum, velit
+          turpis rutrum tellus, vitae luctus neque odio eu est.
+        </p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+      <!-- / section container -->
+    </section>
+    <!-- Banner End -->
+
+    <app-footer></app-footer>
+
+    <!-- JS -->
+    <script src="./js/components.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

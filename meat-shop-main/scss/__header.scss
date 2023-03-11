@@ -1,0 +1,261 @@
+.header {
+  color: $white;
+
+  &__top {
+    background-color: $pri-dark;
+    padding: 10px 20px;
+    transition: none;
+    @include flex;
+
+    @include responsive_medium {
+      display: none;
+    }
+
+    &-item {
+      @include flex;
+
+      i {
+        font-size: 15.5px;
+        margin-right: 7px;
+      }
+      a {
+        color: $white;
+        font-size: 13px;
+        line-height: 18px;
+        border-bottom: 1.5px solid transparent;
+
+        &:hover {
+          border-bottom-color: $white;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @include responsive(0, 640px) {
+      @include flex();
+    }
+  }
+
+  .large {
+    @include flex();
+    align-items: stretch;
+  }
+
+  .brand-name {
+    color: $pri-clr;
+    font-size: 36px;
+    line-height: 54px;
+    padding: 10px 20px;
+    font-family: 'Poppins_Bold';
+
+    @include responsive_large {
+      padding: 5px 20px;
+    }
+
+    @include responsive_medium {
+      font-size: 30px;
+      line-height: 45px;
+    }
+  }
+}
+
+.navbar {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+
+  @include responsive_large {
+    max-width: 520px;
+  }
+
+  @include responsive_medium {
+    max-width: 450px;
+  }
+
+  .nav-link {
+    font-family: 'Poppins_Medium';
+    color: $white;
+    padding: 0 5px;
+    position: relative;
+
+    @include responsive_medium {
+      font-size: 16px;
+    }
+
+    &.active::after {
+      width: 30%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2.8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $white;
+      height: 2px;
+      width: 0px;
+      border-radius: 40px;
+      transition: $global-transition;
+    }
+
+    &:hover {
+      &::after {
+        width: 30%;
+      }
+    }
+  }
+
+  &-large {
+    @include responsive(0, 640px) {
+      display: none;
+    }
+
+    .navbar-nav {
+      @include flex;
+      transform: skewX(40deg);
+      background-color: $pri-clr;
+      padding-right: 60px;
+      padding-left: 50px;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 40px;
+
+      @include responsive_large {
+        padding-left: 35px;
+        padding-right: 50px;
+      }
+    }
+
+    .nav-item {
+      transform: skewX(-40deg);
+    }
+  }
+
+  &-small {
+    @include responsive(0, 640px) {
+      @include flex(center, center);
+    }
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    max-width: 100%;
+    height: 100vh;
+    background-color: $pri-clr;
+    transition: 150ms left linear;
+    z-index: 10000;
+
+    .navbar-nav {
+      @include flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .nav-link {
+      font-size: 22px;
+
+      &::after {
+        height: 3px;
+        bottom: -3px;
+      }
+    }
+  }
+}
+
+.toggle-btn {
+  @include responsive(0, 640px) {
+    display: block;
+  }
+
+  display: none;
+  padding: 0 20px;
+  z-index: 10000;
+  transition: 60ms padding-top linear;
+
+  .bar {
+    width: 33px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: $pri-dark;
+    position: relative;
+    cursor: pointer;
+    transition: 100ms transform linear, 80ms background-color linear;
+
+    &::before {
+      content: '';
+      width: 17px;
+      height: inherit;
+      border-radius: inherit;
+      background-color: inherit;
+      position: absolute;
+      top: 9px;
+      right: 0;
+      transition: inherit;
+    }
+
+    @include responsive-small {
+      width: 30px;
+      height: 3px;
+
+      &::before {
+        top: 7.5px;
+        width: 15px;
+      }
+    }
+  }
+}
+
+// side navbar toggle
+.header.show-nav {
+  .navbar-small {
+    left: 0%;
+  }
+
+  .toggle-btn {
+    padding-top: 20px;
+    position: fixed;
+    right: 0;
+
+    .bar {
+      transform: rotate(45deg);
+      background-color: $white;
+
+      &::before {
+        transform: rotate(90deg);
+        top: 0;
+        width: inherit;
+      }
+    }
+  }
+}
+
+.header.fixed {
+  .header__top {
+    margin-bottom: 60px;
+  }
+
+  .header__bottom {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba($color: $white, $alpha: 0.9);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    top: 0;
+  }
+
+  .brand-name {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include responsive_small {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}
